@@ -4,6 +4,12 @@ body {
   font-family: "Lato", sans-serif;
 }
 
+.criteria {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 h2 {
   font-size: 26px;
   font-weight: 400;
@@ -30,7 +36,7 @@ section.alternate-background {
   color: #fff;
 }
 
-main img {
+img {
   width: 100px;
 }
 
@@ -39,6 +45,11 @@ main img {
 .group {
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+
+img{
+  width: 100%
 }
 
 .item {
@@ -49,6 +60,7 @@ main img {
 .item-double {
   flex: 2;
 }
+
 
 /* -------  Navigation ------- */
 
@@ -62,6 +74,15 @@ header {
   font-family: "Pangolin", cursive;
   font-size: 72px;
   color: #fff;
+}
+
+header nav{
+  display: flex;
+  justify-content: center;
+}
+
+header nav ul {
+  display: flex;
 }
 
 header nav ul li {
@@ -82,7 +103,9 @@ header nav ul li a:hover {
 /* -------  Search Form ------- */
 form {
   border: 2px solid #ff385c;
-  padding: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 form label {
@@ -92,7 +115,7 @@ form label {
 form select,
 form input {
   margin-bottom: 20px;
-  width: 180px;
+  width: 200px;
 }
 
 form button {
@@ -117,3 +140,42 @@ footer p {
 }
 
 /* -------  Media Query ------- */
+
+@media all and (min-width: 480px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    }
+  form {
+    padding: 20px;
+    display:flex;
+    flex-direction: row;
+  }
+.criteria{
+  flex-direction: column;
+}
+  .group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.item1 {
+  width: 49%;
+  padding-bottom: 10px; 
+  margin-bottom: 10px;
+  position: relative;
+}
+
+form select,
+form input {
+  margin-bottom: 20px;
+  width: 200px;
+  margin-right: 20px;
+}
+}
